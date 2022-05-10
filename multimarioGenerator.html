@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!-- MultiMario Generator (this is a comment btw)-->
+<html lang="En">
+<head>
+  <meta charset="UTF-8">
+  <title> MultiMario Generator </title>
+  <!-- <link rel="stylesheet" type="text/css" href=".css" title="style" /> -->
+  <script type="text/javascript">
+function submitF() {
+	var starCount = 0;
+	var catList = "";
+	
+	//{
+	var ds1s = document.getElementById('64ds1s')
+	if (ds1s.checked) {
+		starCount += 1;
+		catList += "SM64DS Any% without 2kds, ";
+	}
+	
+	var ds3s = document.getElementById('64ds3s')
+	if (ds3s.checked) {
+		starCount += 3;
+		catList += "SM64DS Any% with 2kds, ";
+	}
+	
+	var ds8s = document.getElementById('64ds8s')
+	if (ds8s.checked) {
+		starCount += 8;
+		catList += "SM64DS 8 Star, ";
+	}
+	
+	var ds50s = document.getElementById('64ds50s')
+	if (ds50s.checked) {
+		starCount += 50;
+		catList += "SM64DS 50 Star, ";
+	}
+	
+	var ds80s = document.getElementById('64ds80s')
+	if (ds80s.checked) {
+		starCount += 80;
+		catList += "SM64DS 80 Star, ";
+	}
+	
+	var ds150s = document.getElementById('64ds150s')
+	if (ds150s.checked) {
+		starCount += 150;
+		catList += "SM64DS 150 Star, ";
+	}
+	//}
+	
+	//{
+	var og0s = document.getElementById('640s')
+	if (og0s.checked) {
+		starCount += 0;
+		catList += "SM64 0 Star, ";
+	}
+	
+	var og1s = document.getElementById('641s')
+	if (og1s.checked) {
+		starCount += 1;
+		catList += "SM64 1 Star, ";
+	}
+	
+	var og16s = document.getElementById('6416s')
+	if (og16s.checked) {
+		starCount += 16;
+		catList += "SM64 16 Star, ";
+	}
+	
+	var og70s = document.getElementById('6470s')
+	if (og70s.checked) {
+		starCount += 70;
+		catList += "SM64 70 Star, ";
+	}
+	
+	var og120s = document.getElementById('64120s')
+	if (og120s.checked) {
+		starCount += 120;
+		catList += "SM64 120 Star, ";
+	}
+	//}
+	
+	//{
+	var sms44s = document.getElementById('SMS44s')
+	if (sms44s.checked) {
+		starCount += 44;
+		catList += "SMS Any%, ";
+	}
+	var sms96s = document.getElementById('SMS96s')
+	if (sms96s.checked) {
+		starCount += 96;
+		catList += "SMS 96 Shines, ";
+	}
+	var sms120s = document.getElementById('SMS120s')
+	if (sms120s.checked) {
+		starCount += 120;
+		catList += "SMS 120 Shines, ";
+	}
+	//}
+	
+	//{
+	var smg61s = document.getElementById('SMG61s')
+	if (smg61s.checked) {
+		starCount += 61;
+		catList += "SMG1 Any%, ";
+	}
+	var smg120s = document.getElementById('SMG120s')
+	if (smg120s.checked) {
+		starCount += 120;
+		catList += "SMG1 120 Stars, ";
+	}
+	var smg242s = document.getElementById('SMG242s')
+	if (smg242s.checked) {
+		starCount += 242;
+		catList += "SMG1 242 Stars, ";
+	}
+	
+	var smg271s = document.getElementById('SMG271s')
+	if (smg271s.checked) {
+		starCount += 71;
+		catList += "SMG2 Any%, ";
+	}
+	var smg2120s = document.getElementById('SMG2120s')
+	if (smg2120s.checked) {
+		starCount += 120;
+		catList += "SMG2 120 Stars, ";
+	}
+	var Greens = document.getElementById('SMG2greens')
+	if (Greens.checked) {
+		starCount += 120;
+		catList += "SMG2 Green Stars, ";
+	}
+	var smg2242s = document.getElementById('SMG2242s')
+	if (smg2242s.checked) {
+		starCount += 242;
+		catList += "SMG2 242 Stars, ";
+	}
+	//}
+	
+	var any3dl = document.getElementById('3DLany')
+	if (any3dl.checked) {
+		starCount += 100;
+		catList += "SM3DL Any%, ";
+	}
+	var true3dl = document.getElementById('3DLtrue')
+	if (true3dl.checked) {
+		starCount += 290;
+		catList += "SM3DL True Ending, ";
+	}
+	
+	var any3dw = document.getElementById('3DWany')
+	if (any3dw.checked) {
+		starCount += 170;
+		catList += "SM3DW Any%, ";
+	}
+	var threedw380 = document.getElementById('3DW380')
+	if (threedw380.checked) {
+		starCount += 380;
+		catList += "SM3DW 380 Stars, ";
+	}
+	
+	var smoany = document.getElementById('SMOany')
+	if (smoany.checked) {
+		starCount += 124;
+		catList += "SMO Any%, ";
+	}
+	var smodark = document.getElementById('SMOdark')
+	if (smodark.checked) {
+		starCount += 253;
+		catList += "SMO Dark Side, ";
+	}
+	var smodarker = document.getElementById('SMOdarker')
+	if (smodarker.checked) {
+		starCount += 503;
+		catList += "SMO Darker Side, ";
+	}
+	var smoam = document.getElementById('SMOall')
+	if (smoam.checked) {
+		starCount += 880;
+		catList += "SMO All Moons, ";
+	}
+	
+	var anyBF = document.getElementById('BFany')
+	if (anyBF.checked) {
+		starCount += 50;
+		catList += "Bowser's Fury Any%, ";
+	}
+	var BF100 = document.getElementById('BF100')
+	if (BF100.checked) {
+		starCount += 100;
+		catList += "Bowser's Fury 100 Shines, ";
+	}
+	
+	document.getElementById("catName").innerHTML = "The " + starCount + "!";
+	document.getElementById("listOfCats").innerHTML = "Categories: " + catList + "good luck!";
+}  </script>
+  <style> 
+  body {
+  font-family: verdana;
+  } 
+  </style>
+</head>
+<body>
+  <header>
+    <h1> Multi Mario Category Generator </h1>
+  </header>
+  
+  <h1 id="catName"> Category Name </h1>
+  <h3 id="listOfCats"> List of categories in the run </h3>
+  <hr> <!-- this is just a horizontal line. -->
+  <!-- these green things are comments btw -->
+  
+  <p> Select some categories, then press Generate to make your own Multi Mario category! </p>
+ <form> <!-- action="multimarioGenerator.php" method="post" -->
+  <div class="SM64">
+	<h4> SM64 </h4>
+	<input type="checkbox" id="640s" name="0s" value="1">
+	  <label for="640s"> 0 Star</label><br>
+	  
+	  <input type="checkbox" id="641s" name="1sog" value="1">
+	  <label for="641s"> 1 Star</label><br>
+	  
+	  <input type="checkbox" id="6416s" name="16s" value="1">
+	  <label for="6416s"> 16 Star</label><br>
+	  
+	  <input type="checkbox" id="6470s" name="70s" value="1">
+	  <label for="6470s"> 70 Star</label><br>
+	  
+	  <input type="checkbox" id="64120s" name="120og" value="1">
+	  <label for="64120s"> 120 Star</label><br>
+  </div>
+  <div class="SMS">
+	<h4> SMS </h4>
+	<input type="checkbox" id="SMS44s" name="anysms" value="1">
+	  <label for="SMS44s"> Any% (44 Shines)</label><br>
+	  
+	  <input type="checkbox" id="SMS96s" name="96s" value="1">
+	  <label for="SMS96s"> 96 Shines</label><br>
+	  
+	  <input type="checkbox" id="SMS120s" name="120sms" value="1">
+	  <label for="SMS120s"> 120 Shines</label><br>
+  </div>
+  <div class="SM64DS">
+  <h4> SM64DS </h4>
+	  <input type="checkbox" id="64ds1s" name="1sds" value="1">
+	  <label for="64ds1s"> 1 Star (Any% without 2kds)</label><br>
+	  
+	  <input type="checkbox" id="64ds3s" name="3s" value="1">
+	  <label for="64ds3s"> 3 Star (Any% with 2kds)</label><br>
+	  
+	  <input type="checkbox" id="64ds8s" name="8s" value="1">
+	  <label for="64ds8s"> 8 Star</label><br>
+	  
+	  <input type="checkbox" id="64ds50s" name="50s" value="1">
+	  <label for="64ds50s"> 50 Star</label><br>
+	  
+	  <input type="checkbox" id="64ds80s" name="80s" value="1">
+	  <label for="64ds80s"> 80 Star</label><br>
+	  
+	  <input type="checkbox" id="64ds150s" name="150s" value="1">
+	  <label for="64ds150s"> 150 Star</label><br>
+  </div>
+  <div class="SMG1">
+	<h4> SMG </h4>
+	<input type="checkbox" id="SMG61s" name="anysmg" value="1">
+	  <label for="SMG61s"> Any% (61 Stars)</label><br>
+	  
+	  <input type="checkbox" id="SMG120s" name="120smg" value="1">
+	  <label for="SMG120s"> 120 Stars</label><br>
+	  
+	  <input type="checkbox" id="SMG242s" name="242smg" value="1">
+	  <label for="SMG242s"> 242 Stars (100%)</label><br>
+  </div>
+  <div class="SMG2">
+	<h4> SMG2 </h4>
+	<input type="checkbox" id="SMG271s" name="anysmg2" value="1">
+	  <label for="SMG271s"> Any% (71 Stars)</label><br>
+	  
+	  <input type="checkbox" id="SMG2120s" name="120smg2" value="1">
+	  <label for="SMG2120s"> 120 Stars</label><br>
+	  
+	  <input type="checkbox" id="SMG2greens" name="greens" value="1">
+	  <label for="SMG2greens"> Greens (120 Stars)</label><br>
+	  
+	  <input type="checkbox" id="SMG2242s" name="242smg2" value="1">
+	  <label for="SMG2242s"> 242 Stars (100%)</label><br>
+  </div>
+  <div class="SM3DL">
+	<h4> SM3DL </h4>
+	  <input type="checkbox" id="3DLany" name="any3dl" value="1">
+	  <label for="3DLany"> Any% (100 Star Medals)</label><br>
+	  
+	  <input type="checkbox" id="3DLtrue" name="true3dl" value="1">
+	  <label for="3DLtrue"> True Ending (290 Star Medals)</label><br>
+	   
+  </div>
+  <div class="SM3DW">
+	<h4> SM3DW </h4>
+	  <input type="checkbox" id="3DWany" name="any3dw" value="1">
+	  <label for="3DWany"> Any% (170 Stars)</label><br>
+	  
+	  <input type="checkbox" id="3DW380" name="3803dw" value="1">
+	  <label for="3DW380"> 380 Stars</label><br>
+	   
+  </div>
+  <div class="SMO">
+	<h4> SMO </h4>
+	  <input type="checkbox" id="SMOany" name="anysmo" value="1">
+	  <label for="SMOany"> Any% (124 Moons)</label><br>
+	  
+	  <input type="checkbox" id="SMOdark" name="darksmo" value="1">
+	  <label for="SMOdark"> Dark Side (253 Moons)</label><br>
+	  
+	  <input type="checkbox" id="SMOdarker" name="darkersmo" value="1">
+	  <label for="SMOdarker"> Darker Side (503 Moons)</label><br>
+	  
+	  <input type="checkbox" id="SMOall" name="allmoons" value="1">
+	  <label for="SMOall"> All Moons (880)</label><br>
+  </div>
+  <div class="BF">
+	<h4> Bowser's Fury </h4>
+	  <input type="checkbox" id="BFany" name="anyBF" value="1">
+	  <label for="BFany"> Any% (50 Cat Shines)</label><br>
+	  
+	  <input type="checkbox" id="BF100" name="100BF" value="1">
+	  <label for="BF100"> 100 Shines</label><br>
+	   
+  </div>
+  
+	  <br>
+	  <input type="button" value="Generate" id="genButton" onclick="submitF();">
+	  <!-- <input type="submit" value="Submit"> -->
+	  <input type="reset">
+ </form>
+ 
+  
+   <footer>made by: <span> EmilyTheKoopa </span> </footer>
+</body>
+</html>
