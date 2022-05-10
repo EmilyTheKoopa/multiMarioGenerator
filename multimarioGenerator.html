@@ -191,7 +191,14 @@ function submitF() {
 		catList += "Bowser's Fury 100 Shines, ";
 	}
 	
-	document.getElementById("catName").innerHTML = "The " + starCount + "!";
+	var x = document.getElementById("catInfo");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  }
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
+	//those last two lines make it scroll back to the top, added in v1.1.0
+	document.getElementById("catName").innerHTML = "The " + starCount;
 	document.getElementById("listOfCats").innerHTML = "Categories: " + catList + "good luck!";
 }  </script>
   <style> 
@@ -202,11 +209,14 @@ function submitF() {
 </head>
 <body>
   <header>
-    <h1> Multi Mario Category Generator </h1>
+    <h1 style="text-align:center"> Multi Mario Category Generator </h1>
   </header>
   
-  <h1 id="catName"> Category Name </h1>
-  <h3 id="listOfCats"> List of categories in the run </h3>
+  <div id="catInfo" style="display:none;">
+  <h1 id="catName" style="text-align:center; color:blue"> [Category Name] </h1>
+  <h3 id="listOfCats"> [List of categories in the run] </h3>
+  </div>
+  
   <hr> <!-- this is just a horizontal line. -->
   <!-- these green things are comments btw -->
   
